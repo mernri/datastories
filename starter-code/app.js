@@ -90,10 +90,12 @@ app.use(session({
   saveUninitialized: true
 }));
 
-//  initialize passport and passport session
+
+//  initialize passport and passport session and flash
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
