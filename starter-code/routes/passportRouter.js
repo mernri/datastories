@@ -53,7 +53,7 @@ passportRouter.post("/signup", (req, res, next) => {
       if (err) {
         res.render("passport/signup", { message: "Something went wrong" });
       } else {
-        res.redirect("/");
+        res.redirect("/login");
       }
     });
   })
