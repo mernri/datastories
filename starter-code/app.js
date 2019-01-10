@@ -33,6 +33,10 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
+
+// Middleware Flash (pour les erreurs)
+app.use(flash());
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
